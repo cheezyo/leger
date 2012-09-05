@@ -1,0 +1,33 @@
+
+
+
+
+<div id="left">
+	<h1></h1>
+	<img src="http://alfaomegaklinikken.dk/wp-content/uploads/Brystreduktion.jpg" alt="bilde"/>
+	<%= link_to 'Bestil time', new_booking_path, :class => 'button'%>
+	</div>
+
+		<div id="center">
+				<h1><%= sanitize  @type.title %></h1>
+			
+			
+				<%= sanitize  @type.content %>
+			
+			
+			<%  @type.infos.each do |i|%>
+			
+			
+			<% end %>
+	</div>
+			<div id="right">
+			<h1></h1>
+			<%= link_to @type.title, @type, :class => 'at'%>
+			<%  @type.infos.each do |i|%>
+			
+			<%= link_to i.name, i%>
+			
+			<% end %>
+		
+		</div>
+

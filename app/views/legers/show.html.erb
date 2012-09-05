@@ -1,0 +1,26 @@
+
+
+<div onclick="showstuff('show', 1);">
+	<div id="left">
+		<h3>Leger:</h3>
+		<% if Leger.find(:all).count > 0 %>
+		<% Leger.find(:all, :order => 'name ASC').each do |l|%>
+		<% if l == @leger %>
+		<%= link_to l.name, l, :class => 'at' %>
+		<% else %>
+		<%= link_to l.name, l, :class => 'other' %>
+		<% end %>
+		
+
+		<% end %>
+
+		<% end %>
+	</div>
+	<div id="center">
+		<img src="<%= @leger.picture%>" />
+		<h1><%= @leger.name %></h1>
+		<h3><%= @leger.position %></h3>
+		</div>
+		
+
+</div>

@@ -1,0 +1,35 @@
+<%= form_for(@hud) do |f| %>
+  <% if @hud.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hud.errors.count, "error") %> prohibited this hud from being saved:</h2>
+
+      <ul>
+      <% @hud.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_area :content, :cols => 40, :rows => 15, :class => "widgEditor" %>
+  </div>
+ 
+  <%= f.fields_for :behandlingers do |builder|%>
+ 
+  	<%= render 'behandlinger_fields', f: builder %>
+  	
+  <% end %>
+
+	 <%= link_to_add_fields "Legg til underside", f, :behandlingers, "child-links"%>
+
+  <div class="actions">
+    <%= f.submit 'Lagre' %>
+    <%= link_to 'Avbryt', "/admin", :class => "cancel",data: { confirm: 'Er du sikker på at du vil avbryte uten å lagre?' } %>
+  </div>
+<% end %>

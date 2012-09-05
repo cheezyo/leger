@@ -1,0 +1,25 @@
+<h1>Listing huds</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @huds.each do |hud| %>
+  <tr>
+    <td><%= hud.title %></td>
+    <td><%= hud.content %></td>
+    <td><%= link_to 'Show', hud %></td>
+    <td><%= link_to 'Edit', edit_hud_path(hud) %></td>
+    <td><%= link_to 'Destroy', hud, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hud', new_hud_path %>

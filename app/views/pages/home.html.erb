@@ -1,0 +1,39 @@
+<div id="slogan">
+	<% if Sider.find(:all).count > 0 %>
+
+	<% s =  Sider.find_by_title("Hjem") %>
+	<%= sanitize s.content %>
+</div>
+
+<div id="media">
+	<img src="<%= s.picture %>" alt="bilde"/>
+</div>
+
+
+<div id="info-box-wrapper">
+	<div id="info-box">
+		<a href="<%= legers_path %>">
+		<h4>Hvem er vi</h4>
+		<img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQg_SmF5FOQv55v7P_mX9OE_6Va8d_q4f0Baien77dccDU69HxQ&t=1" alt="bilde"/></a>
+	</div>
+	<div id="info-box">
+		<a href="<%= "/kontakt"%>">
+			<h4> Kontakt oss </h4>
+		<img src="https://dl.dropbox.com/u/7238474/leger/leger.gif" alt="bilde"/></a>
+	</div>
+	<div id="info-box">
+		<a href="<%= new_booking_path %>"><h4>Book tid</h4>
+		<img src="https://dl.dropbox.com/u/7238474/leger/clock.png" alt="bilde"/>
+		</a>
+	</div>
+</div>
+
+
+
+<% else %>
+<div id="slogan">
+	<p>
+		Ingenting her
+	</p>
+</div>
+<% end %> 

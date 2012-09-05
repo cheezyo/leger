@@ -1,0 +1,20 @@
+
+<div onclick="showstuff('show', 1);">
+
+	<div id="wideCenter">
+		<h1>Ansatte</h1>
+		<% Leger.find(:all, :order => 'name ASC').each do |lege|%>
+		<br/>
+		<img src="<%= lege.picture%>" />
+		<h1><%= lege.name %></h1>
+		<h3><%= lege.position %></h3>
+		<%= sanitize lege.info %>
+		
+		<% end %>
+		</div>
+		<div id="right">
+	
+		<%= link_to "Om oss", "/omoss"  %>
+		<%= link_to "Ansatte", legers_path, :class => "at"%>
+	</div>
+</div>

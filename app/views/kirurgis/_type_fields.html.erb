@@ -1,0 +1,16 @@
+
+<fieldset>
+  <%= f.label :title, "Navn på under kategori" %><br />
+  <%= f.text_field :title %><br />
+  <%= f.label :content, "Intro tekst" %><br />
+  <%= f.text_area :content, :cols => 40, :rows => 15, :class => "widgEditor" %>
+  <%= f.check_box :_destroy %>
+  <%= f.label :_destroy, "Merk boksen og trykk lagre for å SLETTE hele underkategorien", :id => "delete" %><br/><br/>
+    <h3>Underside for </h3>
+  <%= f.fields_for :infos do |builder| %>
+    <%= render 'info_fields', f: builder %>
+  <% end %>
+  <%= link_to_add_fields "Legg til ny underside", f, :infos, "child-links" %>
+</fieldset>
+
+

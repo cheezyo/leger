@@ -1,0 +1,34 @@
+<%= form_for(@leger) do |f| %>
+  <% if @leger.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@leger.errors.count, "error") %> prohibited this leger from being saved:</h2>
+
+      <ul>
+      <% @leger.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :position %><br />
+    <%= f.text_field :position %>
+  </div>
+  <div class="field">
+    <%= f.label :picture %><br />
+    <%= f.text_field :picture  %>
+  </div>
+  <div class="field">
+    <%= f.label :info %><br />
+    <%= f.text_area :info, :cols => 40, :rows => 15, :class => "widgEditor" %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Lagre' %>
+    <%= link_to 'Avbryt', "/admin", :class => "cancel", data: { confirm: 'Er du sikker på at du vil avbryte uten å lagre?' }%>
+  </div>
+<% end %>

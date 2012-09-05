@@ -1,0 +1,2 @@
+module HudsHelper
+end

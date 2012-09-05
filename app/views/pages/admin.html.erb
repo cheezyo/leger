@@ -1,0 +1,74 @@
+
+<div id="admin-wrapper">
+<h1>Admin panel</h1>
+<div id="box">
+	<%= link_to "Legg til ny", new_sider_path, :class => 'admin-button'%>
+<h3>Rediger Sider:</h3>
+<% if Sider.find(:all).count > 0 %>
+<% Sider.find(:all, :order => 'title ASC').each do |t| %>
+<p>
+<%= link_to t.title, edit_sider_path(t) %> 
+</p>
+<% end %>
+<% else %>
+<p>Ingen sider er blitt opprettet</p>
+<% end %>
+</div>
+<div id="box">
+	<%= link_to "Legg til ny", new_kirurgi_path, :class => 'admin-button'%>
+<h3>Rediger Plastisk Kirurgi:</h3>
+<%if Kirurgi.find(:all).count > 0 %>
+<% Kirurgi.find(:all, :order => 'name ASC').each do |k| %>
+<p>
+	<%= link_to k.name, edit_kirurgi_path(k) %>
+</p>
+<% end %>
+<%else%>
+<p>
+	Ingen plastisk kirurgier opprettet enda
+</p>
+<p>
+	<%= link_to 'Opprett ny', new_kirurgi_path %>
+</p>
+<% end %> 
+</div>
+<div id="box">
+<%= link_to "Legg til ny", new_hud_path, :class => 'admin-button'%>
+<h3>Rediger Hudbehandlinger:</h3>
+<% if Hud.find(:all).count > 0 %>
+<% Hud.find(:all, :order => 'title ASC').each do |h| %>
+<p>
+	<%= link_to h.title, edit_hud_path(h)%>
+</p>
+<% end %>
+<% else %>
+<p>
+	Ingen hundbehandlinger opprettet enda
+</p>
+<p>
+	<%=link_to 'Opprett ny', new_hud_path %>
+</p>
+<% end %> 
+</div>
+<div id="box">
+	<%= link_to "Legg til ny", new_leger_path, :class => 'admin-button'%>
+<h3>Rediger Ansatte:</h3>
+
+<% if Leger.find(:all).count > 0 %>
+<% Leger.find(:all, :order => 'name ASC').each do |l| %>
+<p>
+	<%= link_to l.name, edit_leger_path(l) %>
+</p>
+<% end %>
+<%else%>
+<p>Ingen ansatte er opprettet enda</p>
+<p>
+	<% link_to 'Opprett ny', new_leger_path %>
+</p>
+<% end %>
+</div>
+<div id="box">
+	<%= link_to "Legg til ny", new_hud_path, :class => 'admin-button'%>
+	<h3>Rediger Bilder:</h3>
+	</div>
+</div>

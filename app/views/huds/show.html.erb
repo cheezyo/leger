@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @hud.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @hud.content %>
+</p>
+
+
+<%= link_to 'Edit', edit_hud_path(@hud) %> |
+<%= link_to 'Back', huds_path %>

@@ -1,0 +1,324 @@
+body{
+	font-family: Trebuchet, 'Trebuchet MS', sans-serif;
+}
+p{
+	font-size: 13px;
+	line-height: 1.5em;
+}
+a{
+		font-family: Georgia;
+		font-style: italic;
+		color:#525252;
+		text-decoration: none;
+}
+
+
+a:hover {
+  text-decoration: underline;
+}
+
+#wrapper{
+	width:970px;
+	margin:0 auto;
+	display:block;
+	background:#bf0000;
+}
+/* HEADER */
+header{
+	float:left;
+	height:150px;
+	background:#bf0000;
+	width:auto;
+}
+
+#logo{
+	float:left;
+	height:150px;
+	background:#fff;
+	width:200px;
+}
+
+/* END LOGO AND HEADER*/
+
+/* START NAV */
+nav{
+	float:left;
+	height:auto;
+	margin-top:10px;
+	margin-left:10px;
+	background:#fff;
+	width:auto;
+}
+nav > a {
+	float:left;
+	text-transform: uppercase;	
+	padding:5px;
+	letter-spacing: 1px;
+	border-right:1px solid #bfbfbf;
+}
+/* UNDER MENU1. JAVASCRIPT DISPLAY */
+
+#show {
+	max-width: 750px;
+	height: auto;
+	padding-left: 10px;
+	z-index: 30;
+	display:none;
+	position:absolute;
+	margin-top:30px;
+	margin-left:5px;
+
+	background: #eeeeee;
+}
+#show2 {
+	width: 175px;
+	height: auto;
+	padding-left: 10px;
+	z-index: 30;
+	display:none;
+	position:absolute;
+	margin-top:30px;
+	margin-left:150px;
+
+	background: #eeeeee;
+}
+#leftNav {
+	float: left;
+	width: 110px;
+	padding: 3px;
+
+
+
+}
+
+#leftNav p{
+	line-height: 1em;
+	font-size: 13px;
+	text-align: left;
+	text-decoration: underline;
+	
+}
+
+#leftNav a{
+		line-height: 2em;
+	font-size: 12px;
+		text-align: left;
+		display:block;
+}
+
+/* END NAV */
+
+
+#blank{
+	float:left;
+	height:150px;
+	background:#fff;
+	width:750px;
+}
+
+/* MAIN SECTION ID:CONTENT. INSIDE ARE: LEFT CENTER WIDECENTER AND RIGHT */
+#content{
+	float:left;
+	height:auto;
+	background:#fff;
+	width:970px;
+
+}
+#content img{
+
+	max-width:100%;
+}
+
+#slogan{
+	float:left;
+	width:40%;
+	height:auto;
+	padding:10px 10px 10px 0px;
+}
+
+#slogan p {
+	font-size: 32px;
+	line-height: 1.5em;
+	font-weight:bold;
+	color:#aaaaaa;
+	font-family: Georgia;
+	padding:20px;
+}
+
+#media{
+	float:left;
+	width:55%;
+	height:auto;
+	padding:10px 10px 10px 10px;
+}
+#info-box-wrapper{
+	float:left;
+	height:auto;
+	border-top:1px solid #bfbfbf;
+	background:#fff;
+	width:100%;
+	margin:10px 0px 30px 0px;
+}
+#info-box{
+	float:left;
+	width:30%;
+	height:200px;
+	padding:10px 10px 10px 10px;
+}
+
+#info-box img{
+	width:60%;
+	margin-left:60px;
+}
+#info-box h4{
+	width:100%;
+	font-family:Georgia;
+	font-style:italic;
+	height:auto;
+	padding:5px 0px 5px 0px;
+	text-align: center;
+}
+
+#left{
+	float:left;
+	width:250px;
+	max-height:600px;
+
+
+
+}
+#left img{
+
+	max-width: 240px;
+}
+#right{
+	float:left;
+	width:120px;
+	max-height:600px;
+	padding-left:10px;
+	margin-left:30px;
+
+}
+
+#right a{
+	float:left;
+	width:170px;
+}
+
+
+.other{
+	color:#000;
+}
+
+.at {
+	text-decoration: underline;
+}
+
+#center{
+	float:left;
+	width:500px;
+	max-height:600px;
+	overflow-y:auto;
+
+
+}
+
+#wideCenter{
+	float:left;
+	width:750px;
+	max-height:600px;
+	overflow-y:auto;
+	padding:10px;
+	border-right:1px solid #bfbfbf;
+}
+#wideCenter img{
+	float:left;
+	margin:20px 20px 20px 0px;
+	max-width:200px;
+}
+
+#center p {
+	padding-right:10px;
+}
+#wideCenter p {
+	padding-right:10px;
+}
+/* END MAIN CONTENT */
+
+/* FOOTER */
+
+footer{
+	float:left;
+	height:60px;
+	background:#fff;
+	width:970px;
+	border-top:1px solid #bfbfbf;
+	text-align: center;
+
+}
+footer p {
+	padding:0px 250px 0px 250px;
+	font-size: 11px;
+	color:#a1a1a1;
+}
+
+
+
+/* GALLERY */
+#gallerywrapper{
+	float:left;
+	height:auto;
+	width:100%;
+	margin-bottom:20px;
+
+}
+#gallery{
+	margin:0 auto;
+	width:800px;
+	height: 480px;
+	
+}
+#gallery img{
+	margin:0 auto;
+	width:800px;
+	height:474px;
+
+}
+#thumbwrapper{
+	width:800px;
+	height:auto;
+	margin:0 auto;
+}
+.thumb img{
+	float:left;
+	width:114px;
+	height:74px;
+}
+
+
+/* END GALLERY */
+/* END FOOTER */
+
+/* ORDER BUTTON */
+.button{
+	padding:10px;
+	color:#fff;
+	background:#000;
+	border-radius: 10px;
+	float:left;
+	margin-top:20px;
+	margin-bottom:20px;
+	
+}
+/* END ORDER BUTTON */
+
+/* FLASH MESSAGES */
+.flashsuccess{
+	background:#CDC673;
+	padding:5px;
+	font-weight:bold;
+	width:50%;
+	text-align: center;
+}
+
+/* END FLASH */

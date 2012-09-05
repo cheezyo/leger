@@ -1,0 +1,20 @@
+<div id="left">
+	<%= link_to 'Bestil time', root_path, :class => 'button'%>
+	</div>
+<div id="center">
+	<h1><%= @info.name %></h1>
+	<%= simple_format @info.content %>
+</div>
+<div id="right">
+	<h1></h1>
+	<% type = Type.find(@info.type_id)%>
+
+	<%= link_to type.title, type%>
+	<% type.infos.each do |i| %>
+	<% if i == @info %>
+	<%= link_to i.name, i, :class => 'at'%>
+	<%else%>
+	<%= link_to i.name, i, :class => 'other'%>
+	<% end %>
+	<% end %>
+</div>

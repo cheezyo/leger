@@ -1,0 +1,30 @@
+<%= form_for(@sider) do |f| %>
+  <% if @sider.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sider.errors.count, "error") %> prohibited this sider from being saved:</h2>
+
+      <ul>
+      <% @sider.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label 'Navn' %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label 'Bilde' %><br />
+    <%= f.text_field :picture %>
+  </div>
+  <div class="field">
+    <%= f.label 'Innhold' %><br />
+    <%= f.text_area :content, :cols => 40, :rows => 100, :class => "widgEditor"  %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Lagre' %>
+    <%= link_to 'Avbryt', "/admin", :class => "cancel",data: { confirm: 'Er du sikker på at du vil avbryte uten å lagre?' } %>
+  </div>
+<% end %>

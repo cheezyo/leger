@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Legekontor</title>
+		<%= stylesheet_link_tag    "application", :media => "all" %>
+		<%= javascript_include_tag "application" %>
+		<%= csrf_meta_tags %>
+		</head>
+		<body>
+			<div id="wrapper">
+			<header>
+				<div id="logo">
+				<img class="headerpic" src="http://alfaomegaklinikken.dk/wp-content/themes/aok/images/logo.jpg" alt="pic"/>
+				</div>
+			</header>
+
+			<nav>
+				<%= link_to 'Hjem', root_path, :class => 'home' %> 
+				<a href="javascript:void(0)"  onclick="showstuff('show', 0, 'k');showstuff2('show2', 1, 'h');" id="k"> Kirurgi</a>				
+				<a href="javascript:void(0)"  onclick="showstuff2('show2', 0, 'h');showstuff('show', 1, 'k');" id="h"> Hudbehandlinger</a>				
+				
+				<%= link_to 'Om oss', "/omoss" %>
+				<%= link_to 'Priser', "/pris" %>
+				<%= link_to 'Kontakt oss', "/kontakt" %>
+				
+			
+			<div  id="show">
+				<% if Kirurgi.find(:all).count > 0 %>
+
+				<% Kirurgi.find(:all, :order => 'name ASC').each do |k| %>
+				<div id="leftNav">
+					<p class="categori"><%= k.name %></p>
+					<% k.types.each do |t|%>
+					
+						<%= link_to t.title, t %>
+					
+					<%end%>
+				</div>
+				<% end %>
+				<% end %>
+			</div>
+			
+			<div  id="show2">
+				<!--[if IE]><style>
+				#show2{
+					margin-left:150px;
+				}
+			</style><![endif]-->
+				<% if Hud.find(:all).count > 0 %>
+
+				<% Hud.find(:all, :order => 'title ASC').each do |h| %>
+				<div id="leftNav">
+					<%= link_to h.title, h %>
+					
+				</div>
+				<% end %>
+				<% end %>
+			</div>
+			</nav>
+			
+			<div onclick="showstuff('show', 1, 'k'); showstuff2('show2',1, 'h');">
+			<section id="content">
+				<% flash.each do |key, value| %>
+           <div class="flash<%= key  %>"><%= value %></div>
+          <% end %>
+			<%= yield %>
+				</section>
+			
+				
+			<footer>
+				<p>Ansvarlig redaktør og administrerende direktør: Torry Pedersen
+Redaktør digital: Espen Egil Hansen Redaktør avis: Helje Solberg Politisk redaktør: Hanne Skartveit
+Digital direktør: Jo Christian Oterhals
+Sentralbord VG: 22 00 00 00</p>
+			</footer>
+			</div>
+			</div>
+		</body>
+</html>
