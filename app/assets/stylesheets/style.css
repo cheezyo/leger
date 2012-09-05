@@ -11,6 +11,9 @@ a{
 		color:#525252;
 		text-decoration: none;
 }
+img{
+	border:none;
+}
 
 
 a:hover {
