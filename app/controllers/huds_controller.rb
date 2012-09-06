@@ -1,6 +1,5 @@
 class HudsController < ApplicationController
-  # GET /huds
-  # GET /huds.json
+   before_filter :authorize, only:[:index, :new,:create,:edit, :update, :destroy]
   def index
     @huds = Hud.all
   end

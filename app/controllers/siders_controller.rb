@@ -1,6 +1,6 @@
 class SidersController < ApplicationController
-  # GET /siders
-  # GET /siders.json
+     before_filter :authorize
+
   def index
     @siders = Sider.all
   end

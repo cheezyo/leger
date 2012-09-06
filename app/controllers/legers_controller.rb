@@ -1,4 +1,5 @@
 class LegersController < ApplicationController
+   before_filter :authorize, only:[:show, :new,:create,:edit, :update, :destroy]
 
   def index
     @legers = Leger.all

@@ -1,7 +1,7 @@
 <div id="slogan">
 	<% if Sider.find(:all).count > 0 %>
 
-	<% s =  Sider.find_by_title("Hjem") %>
+	<% if s =  Sider.find_by_title("Hjem") %>
 	<%= sanitize s.content %>
 </div>
 
@@ -29,7 +29,7 @@
 </div>
 
 
-
+<% end%>
 <% else %>
 <div id="slogan">
 	<p>

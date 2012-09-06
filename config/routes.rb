@@ -1,5 +1,9 @@
 Legekontor::Application.routes.draw do
+  
+  get 'registrer', to: 'users#new', as: 'registrer'
 
+  resources :users
+  resources :sessions
 
   resources :bookings
 

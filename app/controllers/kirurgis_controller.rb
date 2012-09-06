@@ -1,6 +1,6 @@
 class KirurgisController < ApplicationController
-  # GET /kirurgis
-  # GET /kirurgis.json
+   before_filter :authorize
+
   def index
     @kirurgis = Kirurgi.all
   end

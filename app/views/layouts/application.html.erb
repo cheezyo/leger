@@ -57,7 +57,13 @@
 				<% end %>
 			</div>
 			</nav>
+			<nav>
+			<% if current_user %>
+			<%= link_to "Admin", "/admin" %>
+			<%= link_to "Log ut", session_path("current"), :method => "delete"%>
 			
+			<% end %>
+			</nav>
 			<div onclick="showstuff('show', 1, 'k'); showstuff2('show2',1, 'h');">
 			<section id="content">
 				<% flash.each do |key, value| %>

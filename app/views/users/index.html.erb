@@ -1,0 +1,4 @@
+<% User.find(:all).each do |u| %>
+	<%= u.email %>
+ <%= link_to 'Slett', u, method: :delete, data: { confirm: 'Er du sikker på at du vil slette denne siden?' } %>
+<% end %>
