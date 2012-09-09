@@ -206,6 +206,15 @@ nav > a {
 #right a{
 	float:left;
 	width:170px;
+ 	/* test */
+	background:#000;
+	color:#fff;
+	border-radius:10px;
+	padding:5px;
+	margin-top:5px;
+	text-align: center;
+	/*end test*/
+	
 }
 
 

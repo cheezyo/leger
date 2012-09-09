@@ -1,7 +1,7 @@
 <%= form_for(@booking) do |f| %>
   <% if @booking.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
+      <h2><%= pluralize(@booking.errors.count, "error") %> prohibited this booking from being send:</h2>
 
       <ul>
       <% @booking.errors.full_messages.each do |msg| %>
@@ -10,36 +10,53 @@
       </ul>
     </div>
   <% end %>
+<div id="booking">
+  <div class="field">
+    <%= f.label 'Kjønn', :class => 'underline'%><br /><br/>
+	<% ['Man', 'Kvinne'].each do |gender| %>
+		<%= f.radio_button :gender, gender %>
+		<%= f.label gender%>
+		
+	<% end %>
+  </div>
+  <div class="field">
 
-  <div class="field">
-    <%= f.label :gender %><br />
-    <%= f.text_field :gender %>
+  	   <%= f.label 'Alder' , :class => 'underline'%><br/><br/>
+  	   <% [ '18-25', '25-35','35-45', '45-'].each do |age| %>
+  	   	<%= f.radio_button :age, age %>
+  	   	<%= f.label age%>
+  	   <% end %>
   </div>
   <div class="field">
-    <%= f.label :age %><br />
-    <%= f.text_field :age %>
+  	<br/>
+    <%= f.label 'Konsultasjon', :class => 'underline' %><br /><br/>
+	<% ['Plastisk kirurgi', 'Hudbehandlinger'].each do |consoltion|%>
+	<%= f.radio_button :consoltion, consoltion%>
+	<%= f.label consoltion %>
+	<% end %>
+	
   </div>
+  </div>
+  <div id="booking">
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.label 'Navn' %><br />
+    <%= f.text_field :name %><br/>
   </div>
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.text_field :email %>
+    <%= f.email_field  :email %><br/>
   </div>
   <div class="field">
-    <%= f.label :phone %><br />
-    <%= f.text_field :phone %>
+    <%= f.label 'Telefon' %><br />
+    <%= f.text_field :phone %><br/>
   </div>
+  
   <div class="field">
-    <%= f.label :consoltion %><br />
-    <%= f.text_field :consoltion %>
-  </div>
-  <div class="field">
-    <%= f.label :message %><br />
-    <%= f.text_area :message %>
+    <%= f.label 'Mer info' %><br />
+    <%= f.text_area :message, :cols => 50, :rows => 6 %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Send' %>
   </div>
 <% end %>
+</div>

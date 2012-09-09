@@ -41,14 +41,11 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(params[:booking])
 
-    respond_to do |format|
+
       if @booking.save
-        format.html { redirect_to @booking, notice: 'Booking was successfully created.' }
-        format.json { render json: @booking, status: :created, location: @booking }
+      redirect_to root_url, :flash => { :success => "Takk for din hendvendlse. Vi tar kontakt med deg."}
       else
-        format.html { render action: "new" }
-        format.json { render json: @booking.errors, status: :unprocessable_entity }
-      end
+        render :new
     end
   end
 

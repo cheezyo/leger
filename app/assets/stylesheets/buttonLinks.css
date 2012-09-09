@@ -134,3 +134,19 @@ input[type=button], input[type=submit], button{
 	height:auto;
 	float:left;
 }
+#booking{
+	width:400px;
+	height:auto;
+	float:left;
+}
+#booking input[type=text], textarea{
+	float:left;
+}
+#booking label{
+	font-weight: normal;
+	font-style: italic;
+}
+
+.underline{
+	text-decoration: underline;
+}
