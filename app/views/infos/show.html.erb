@@ -6,7 +6,7 @@
 	<%= simple_format @info.content %>
 </div>
 <div id="right">
-	<h1></h1>
+	<h1>Mer info</h1>
 	<% type = Type.find(@info.type_id)%>
 
 	<%= link_to type.title, type%>

@@ -1,0 +1,26 @@
+<div id="left">
+	<%= link_to 'Bestil time', root_path, :class => 'button'%>
+	</div>
+<div id="center">
+	<h1><%= @behandlinger.title %></h1>
+	<%= simple_format @behandlinger.content %>
+</div>
+<div id="right">
+	<h3>Mer info</h3>
+	<% hud = Hud.find(@behandlinger.hud_id) %>
+	<%= link_to hud.title, hud %>
+	<% hud.behandlingers.each do |b|%>
+	<% if b == @behandlinger %>
+		<%= link_to b.title, b, :class => 'at' %>
+	<% else %>
+	<%= link_to b.title, b, :class => 'other' %>
+	<% end %>
+	<% end %>
+
+	
+	
+	
+
+
+
+</div>

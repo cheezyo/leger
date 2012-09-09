@@ -10,7 +10,7 @@ Legekontor::Application.routes.draw do
 
   resources :huds
 
-  resources :legers
+
 
    root to: 'pages#home'
    match "/omoss" => "pages#about"
@@ -19,7 +19,7 @@ Legekontor::Application.routes.draw do
    match "/kontakt" => "pages#contactus"
    match "/gal" => "pages#gal"
 
-  resources :kirurgis, :types, :infos, :legers
+  resources :kirurgis, :types, :infos, :legers,:behandlingers
   
 
   # The priority is based upon order of creation:
