@@ -2,6 +2,8 @@
 <fieldset>
   <%= f.label :title, "Navn på under kategori" %><br />
   <%= f.text_field :title %><br />
+    <%= f.label :picture, "Bilde" %><br />
+  <%= f.text_field :picture %><br />
   <%= f.label :content, "Intro tekst" %><br />
   <%= f.text_area :content, :cols => 40, :rows => 15, :class => "widgEditor" %>
   <%= f.check_box :_destroy %>
