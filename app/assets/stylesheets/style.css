@@ -1,5 +1,6 @@
 body{
 	font-family: Trebuchet, 'Trebuchet MS', sans-serif;
+
 }
 p{
 	font-size: 13px;
@@ -24,13 +25,13 @@ a:hover {
 	width:970px;
 	margin:0 auto;
 	display:block;
-	background:#bf0000;
+
 }
 /* HEADER */
 header{
 	float:left;
 	height:150px;
-	background:#bf0000;
+
 	width:auto;
 }
 
@@ -122,7 +123,7 @@ nav > a {
 /* MAIN SECTION ID:CONTENT. INSIDE ARE: LEFT CENTER WIDECENTER AND RIGHT */
 #content{
 	float:left;
-	height:auto;
+
 	background:#fff;
 	width:970px;
 
@@ -185,19 +186,22 @@ nav > a {
 #left{
 	float:left;
 	width:250px;
-	max-height:600px;
-
-
-
+	max-height:475px;
 }
 #left img{
 
 	max-width: 240px;
 }
+#wideLeft{
+	float:left;
+	width:450px;
+	max-height:475px;
+	overflow-y:auto;
+}
 #right{
 	float:left;
 	width:120px;
-	max-height:600px;
+	max-height:475px;
 	padding-left:10px;
 	margin-left:30px;
 
@@ -229,19 +233,27 @@ nav > a {
 #center{
 	float:left;
 	width:500px;
-	max-height:600px;
+	max-height:475px;
 	overflow-y:auto;
 
+
+}
+#centerFrom{
+	float:right;
+	width:450px;
+	height:475px;
+	overflow-y:auto;
+	padding:10px;
 
 }
 
 #wideCenter{
 	float:left;
 	width:750px;
-	max-height:600px;
+	height:475px;
 	overflow-y:auto;
 	padding:10px;
-	border-right:1px solid #bfbfbf;
+
 }
 #wideCenter img{
 	float:left;
@@ -279,32 +291,34 @@ footer p {
 /* GALLERY */
 #gallerywrapper{
 	float:left;
-	height:auto;
-	width:100%;
-	margin-bottom:20px;
+	height:475px;
+	width:720px;
+	margin:0 auto;
 
 }
 #gallery{
 	margin:0 auto;
 	width:800px;
-	height: 480px;
+	height: 350px;
 	
 }
 #gallery img{
 	margin:0 auto;
-	width:800px;
-	height:474px;
+	width:700px;
+	height:350px;
 
 }
 #thumbwrapper{
-	width:800px;
-	height:auto;
-	margin:0 auto;
+
+	width:720px;
+	height:100px;
+	overflow-y:auto;
+
 }
 .thumb img{
 	float:left;
-	width:114px;
-	height:74px;
+	width:100px;
+	height:64px;
 }
 
 

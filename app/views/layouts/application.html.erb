@@ -6,8 +6,12 @@
 		<%= javascript_include_tag "application" %>
 		<%= csrf_meta_tags %>
 		</head>
-		<body>
+		<body <%if !current_user %>style="overflow:hidden;"<%end%>>
 			<div id="wrapper">
+					<% flash.each do |key, value| %>
+           <div class="flash<%= key  %>"><%= value %></div>
+          <% end %>
+				<% if current_user %>
 			<header>
 				<div id="logo">
 				<img class="headerpic" src="http://alfaomegaklinikken.dk/wp-content/themes/aok/images/logo.jpg" alt="pic"/>
@@ -58,6 +62,7 @@
 			</div>
 			</nav>
 			<nav>
+				<% end%>
 			<% if current_user %>
 			<%= link_to "Admin", "/admin" %>
 			<%= link_to "Log ut", session_path("current"), :method => "delete"%>
@@ -65,20 +70,20 @@
 			<% end %>
 			</nav>
 			<div onclick="showstuff('show', 1, 'k'); showstuff2('show2',1, 'h');">
-			<section id="content">
-				<% flash.each do |key, value| %>
-           <div class="flash<%= key  %>"><%= value %></div>
-          <% end %>
+			
+			<section id="content" <% if !current_user %>style=" height:480px;<% end %>">
+				
 			<%= yield %>
 				</section>
 			
-				
+			<% if current_user %>	
 			<footer>
 				<p>Ansvarlig redaktør og administrerende direktør: Torry Pedersen
 Redaktør digital: Espen Egil Hansen Redaktør avis: Helje Solberg Politisk redaktør: Hanne Skartveit
 Digital direktør: Jo Christian Oterhals
 Sentralbord VG: 22 00 00 00</p>
 			</footer>
+			<% end%>
 			</div>
 			</div>
 		</body>

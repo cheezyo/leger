@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-   before_filter :authorize, only:[:index, :show,:edit, :update, :destroy]
+   before_filter :authorize#, only:[:index, :show,:edit, :update, :destroy]
   def index
     @bookings = Booking.all
 

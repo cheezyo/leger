@@ -4,8 +4,15 @@
 </div>
 
 <div id="center">
-	
-	<h1>Om oss</h1>
+	<% if Sider.find(:all).count > 0 %>
+
+	<% if s =  Sider.find_by_title("Om oss") %>
+	<h1> <%= s.title %></h1>
+	<%= sanitize s.content %>
+	<% end %>
+	<% else %>
+	<p>Ingenting å vise</p>
+	<% end %>
 </div>
 
 

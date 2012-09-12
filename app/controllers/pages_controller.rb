@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-
+ before_filter :authorize, only:['home', 'about', 'contactus', 'price', 'gal']
 
   def home
     
@@ -17,7 +17,7 @@ class PagesController < ApplicationController
   end
   
   def contactus
-    
+   @booking = Booking.new 
   end
   
   def price

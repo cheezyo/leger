@@ -135,14 +135,18 @@ input[type=button], input[type=submit], button{
 	float:left;
 }
 #booking{
-	width:400px;
+	width:360px;
 	height:auto;
 	float:left;
 }
-#booking input[type=text], textarea{
+#booking input[type=text],input[type=email], textarea{
 	float:left;
+	padding:0px;
+	margin:0px;
 }
 #booking label{
+	margin:0px;
+	font-size:14px;
 	font-weight: normal;
 	font-style: italic;
 }

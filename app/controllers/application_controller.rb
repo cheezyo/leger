@@ -9,6 +9,6 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
   
   def authorize
-    redirect_to root_path, alert: "ikke lov" if current_user.nil?
+    redirect_to "/admin", alert: "ikke lov" if current_user.nil?
   end
 end
