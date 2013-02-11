@@ -119,7 +119,7 @@ body{
 #article{
 	float:left;
 	width:974px;
-	max-height:540px;
+	max-height:600px;
 	overflow-y:auto;
 	overflow-x:hidden;
 	padding:0 0 0 0;
