@@ -123,6 +123,7 @@ body{
 	overflow-y:auto;
 	overflow-x:hidden;
 	padding:0 0 0 0;
+	background:#fff;
 }
 #section{
 	float:left;
@@ -145,14 +146,40 @@ body{
 #rightSide{
 	float:left;
 	width:150px;
-	height:200px;
+	height:auto;
 	background:#fff;
-	padding: 15px;	
+	padding: 15px 10px 15px 15px;	
+}
+
+#rightSide a{
+	float:left;
+	width:100%;
+	text-decoration: none;
+	color:#0000FF;
+	line-height: 1.5;
+}
+#rightSide a:visited{
+
+}
+#rightSide a:hover{
+	text-decoration: underline;
+}
+#leftSide a{
+	float:left;
+	width:100%;
+	text-decoration: none;
+	color:#0000FF;
+}
+#leftSide a:visited{
+
+}
+#leftSide a:hover{
+	text-decoration: underline;
 }
 #leftSide{
 	float:left;
 	width:200px;
-	height:200px;
+	height:auto;
 	background:#fff;
 	padding: 15px;	
 }
@@ -164,7 +191,7 @@ body{
 #centerSection{
 	float:left;
 	width:520px;
-	height:200px;
+	height:auto;
 	background:#fff;
 	padding:15px;
 }

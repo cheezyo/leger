@@ -1,13 +1,13 @@
-<div id="left">
+<div id="leftSide">
 	<h1></h1>
 		<img src="<%= @hud.picture %>" alt="bilde"/>
 	<%= link_to 'Bestil time', root_path, :class => 'button'%>
 	</div>
-<div id="center">
+<div id="centerSection">
 	<h1><%= @hud.title %></h1>
 	<%= simple_format @hud.content %>
 </div>
-<div id="right">
+<div id="rightSide">
 	<h3>Mer info</h3>
 	
 	<%= link_to @hud.title, @hud, :class => 'at'%>
