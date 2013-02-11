@@ -71,6 +71,7 @@ body{
 .subMenuLeftBox a{
 	color:#06396D;
 	text-decoration: none;
+	width:100%;
 }
 .subMenuLeftBox a:hover{
 	text-decoration: underline;
