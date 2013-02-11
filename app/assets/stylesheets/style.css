@@ -72,6 +72,7 @@ body{
 	color:#06396D;
 	text-decoration: none;
 	width:100%;
+	float:left;
 }
 .subMenuLeftBox a:hover{
 	text-decoration: underline;
