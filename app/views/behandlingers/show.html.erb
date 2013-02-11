@@ -1,13 +1,13 @@
-<div id="left">
+<div id="leftSide">
 	<h1></h1>
 		<img src="<%= Hud.find(@behandlinger.hud_id).picture %>" alt="bilde"/>
 	<%= link_to 'Bestil time', root_path, :class => 'button'%>
 	</div>
-<div id="center">
+<div id="centerSection">
 	<h1><%= @behandlinger.title %></h1>
 	<%= simple_format @behandlinger.content %>
 </div>
-<div id="right">
+<div id="rightSide">
 	<h3>Mer info</h3>
 	<% hud = Hud.find(@behandlinger.hud_id) %>
 	<%= link_to hud.title, hud %>

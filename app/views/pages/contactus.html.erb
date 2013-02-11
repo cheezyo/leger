@@ -1,4 +1,4 @@
-<div id="wideLeft">
+<div id="leftSide">
 		<% if Sider.find(:all).count > 0 %>
 
 	<% if s =  Sider.find_by_title("Kontakt oss") %>
@@ -9,7 +9,7 @@
 	<p>Ingenting å vise</p>
 	<% end %>
 	</div>
-<div id="centerFrom">
+<div id="wideSection">
 <%= render :partial => 'bookings/form'  %> 
 </div>
 

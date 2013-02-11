@@ -1,4 +1,4 @@
-<div id="left">
+<div id="leftSide">
 	<h1></h1>
 		<% if Sider.find(:all).count > 0 %>
 
@@ -6,7 +6,7 @@
 <img src="<%= s.picture %>">
 </div>
 
-<div id="center">
+<div id="centerSection">
 
 	<h1> <%= s.title %></h1>
 	<%= sanitize s.content %>
@@ -17,7 +17,7 @@
 </div>
 
 
-<div id="right">
+<div id="rightSide">
 		<%= link_to "Om oss", "/omoss", :class => "at"  %>
 		<%= link_to "Ansatte", legers_path%>
 		<%= link_to "Bilder", "/gal" %>
