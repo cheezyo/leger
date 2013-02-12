@@ -1,5 +1,5 @@
 <div id="leftSide">
-	<h1></h1>
+		
 	<img src="<%= Type.find(@info.type_id).picture %>" alt="bilde"/>
 	<%= link_to 'Bestil time', root_path, :class => 'button'%>
 	</div>
@@ -8,7 +8,6 @@
 	<%= simple_format @info.content %>
 </div>
 <div id="rightSide">
-	<h1>Mer info</h1>
 	<% type = Type.find(@info.type_id)%>
 
 	<%= link_to type.title, type%>

@@ -3,7 +3,7 @@
 
 
 <div id="leftSide">
-	<h1></h1>
+
 	<img src="<%= @type.picture%>" alt="bilde"/>
 	<%= link_to 'Bestil time', new_booking_path, :class => 'button'%>
 	</div>
@@ -21,7 +21,7 @@
 			<% end %>
 	</div>
 			<div id="rightSide">
-			<h3>Mer info</h3>
+
 			<%= link_to @type.title, @type, :class => 'at'%>
 			<%  @type.infos.each do |i|%>
 			
