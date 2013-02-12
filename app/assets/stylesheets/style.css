@@ -2,6 +2,11 @@ body{
 	font-family: Trebuchet, 'Trebuchet MS', sans-serif;
 	background:#F3F3F3;
 }
+h1, h2, h3, h4, h5, h6{
+	margin-top:0;
+	margin-bottom:0px;
+	padding-top:0;
+}
 
 #headerWrapper{
 	width:100%;
@@ -184,10 +189,12 @@ body{
 	padding: 15px;	
 }
 
-#leftSide, #rightSide img{
+#rightSide img{
 	width:200px;
 }
-
+#leftSide img{
+	width:200px;
+}
 #centerSection{
 	float:left;
 	width:520px;
@@ -214,4 +221,104 @@ body{
 	color:#F2F1DC;
 	background-repeat:no-repeat;
 	background-color:#fff;
+}
+
+
+
+/* GALLERY */
+#gallerywrapper{
+	float:left;
+	height:auto;
+	width:100%;
+	margin-bottom:20px;
+
+}
+#gallery{
+	margin:0 auto;
+	width:800px;
+	height: 480px;
+	
+}
+#gallery img{
+	margin:0 auto;
+	width:800px;
+	height:474px;
+
+}
+#thumbwrapper{
+	width:800px;
+	height:auto;
+	margin:0 auto;
+}
+.thumb img{
+	float:left;
+	width:114px;
+	height:74px;
+}
+/* END GALLERY */
+
+/* DOCTORS */
+.doctor img{
+	width:200px;
+	float:left;
+	padding:0 10px 5px 0;	
+}
+
+
+/*END DOCTORS*/
+.margin-top{
+	margin-top:20px;
+}
+#booking{
+	width:360px;
+	height:auto;
+	padding:15px;
+	float:left;
+}
+
+#contactUs{
+	width:530px;
+	padding: 15px;
+	float:left;
+
+}
+.middle{
+	width:352px;
+	padding:40px 0 0 0;
+	float:left;
+}
+.middle img{
+	width:350px;
+	
+	border:1px solid #000;
+
+}
+
+#contact-info{
+	float:left;
+	width:400px;
+	margin:20px 0 0 0;
+}
+
+
+.info-wrapper{
+	margin:5px 0 0 0;
+	float:left;
+}
+.thumb-row{
+	width:50px;
+	height:32px;
+	float:left;
+
+}
+.thumb-row img{
+	padding:5px 0 0 0;
+
+}
+
+.info-row{
+	width:300px;
+	height:50px;
+	float:left;
+
 }

@@ -1,18 +1,20 @@
 
 <div onclick="showstuff('show', 1);">
 
-	<div id="wideCenter">
+	<div id="wideSection">
 		<h1>Ansatte</h1>
 		<% Leger.find(:all, :order => 'name ASC').each do |lege|%>
 		<br/>
+		<div class="doctor">
 		<img src="<%= lege.picture%>" />
-		<h1><%= lege.name %></h1>
-		<h3><%= lege.position %></h3>
+		</div>
+		<h3><%= lege.name %></h3>
+		<h5><%= lege.position %></h5>
 		<%= sanitize lege.info %>
 		
 		<% end %>
 		</div>
-		<div id="right">
+		<div id="rightSide">
 	
 		<%= link_to "Om oss", "/omoss"  %>
 		<%= link_to "Ansatte", legers_path, :class => "at"%>

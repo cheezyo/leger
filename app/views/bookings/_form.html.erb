@@ -10,14 +10,14 @@
       </ul>
     </div>
   <% end %>
+<div class="margin-top"></div>
 
-  <div id="booking">
   <div class="field">
     <%= f.label 'Navn' %><br />
     <%= f.text_field :name %>
   </div>
     <div class="field">
-    <%= f.label 'Kjønn', :class => 'underline'%>
+    <%= f.label 'Kjønn', :class => 'underline'%><br />
 	<% ['Man', 'Kvinne'].each do |gender| %>
 		<%= f.radio_button :gender, gender %>
 		<%= f.label gender%>
@@ -26,11 +26,10 @@
   </div>
     <div class="field">
 
-  	   <%= f.label 'Alder' , :class => 'underline'%>
-  	   <% [ '18-25', '25-35','35-45', '45-'].each do |age| %>
-  	   	<%= f.radio_button :age, age %>
-  	   	<%= f.label age%>
-  	   <% end %>
+  	   <%= f.label 'Alder'%><br />
+  	   	<%= f.number_field :age, :class => 'age'%>
+  	  
+  	  
   </div>
   <div class="field">
     <%= f.label :email %><br />
@@ -51,10 +50,10 @@
   </div>
   <div class="field">
     <%= f.label 'Mer info' %><br />
-    <%= f.text_area :message, :cols => 50, :rows => 6 %>
+    <%= f.text_area :message, :cols => 25, :rows => 6 %>
   </div>
   <div class="actions">
     <%= f.submit 'Send' %>
   </div>
 <% end %>
-</div>
+

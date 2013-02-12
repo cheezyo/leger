@@ -1,0 +1,37 @@
+input:focus{
+	background:#EBEBEB;
+	outline:none;
+}
+input{
+	border-radius:10px;
+	padding:5px;
+}
+
+input.age{
+	width:50px;
+}
+textarea:focus{
+	outline: none;
+	background:#EBEBEB;
+	border:none;
+}
+textarea{
+	border-radius:10px;
+	padding:10px;
+}
+select:focus{
+	outline: none;
+	background:#EBEBEB;
+}
+.searchButton{
+	background:#fff;
+	font-weight: bold;
+	border-radius:10px;
+}
+.searchField{
+	border-radius:10px;
+	padding:3px 0 3px 5px;
+	margin:10px 0 0 0;
+	border:none;
+	
+}

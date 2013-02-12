@@ -1,4 +1,4 @@
-<div id="leftSide">
+<div id="booking">
 		<% if Sider.find(:all).count > 0 %>
 
 	<% if s =  Sider.find_by_title("Kontakt oss") %>
@@ -8,8 +8,32 @@
 	<% else %>
 	<p>Ingenting å vise</p>
 	<% end %>
+	<%= render :partial => 'bookings/form'  %> 
 	</div>
-<div id="wideSection">
-<%= render :partial => 'bookings/form'  %> 
+<div id="contactUs">
+	<h1>Her finner du oss</h1>
+	<div id="contact-info">
+			<div class="info-wrapper">
+			<div class="thumb-row"><img src="https://dl.dropbox.com/u/7238474/leger/book.png" /></div>
+			<div class="info-row"><p>+47 999 99 999</p></div>
+			</div>
+			<div class="info-wrapper">
+			<div class="thumb-row"><img src="https://dl.dropbox.com/u/7238474/leger/mail.png" style="padding:8px 0;"/></div>
+			<div class="info-row"><p>mail@example.com</p></div>
+			</div>
+			<div class="info-wrapper">
+			<div class="thumb-row"><img src="https://dl.dropbox.com/u/7238474/leger/home.png" /></div>
+			<div class="info-row"><p>Example 145 1167 OSLO, Norway</p></div>
+			</div>
+			<div class="info-wrapper">
+			<div class="thumb-row"><img src="https://dl.dropbox.com/u/7238474/leger/info.png" style="padding:20px 0;"/></div>
+			<div class="info-row"><p>Available Monday to Friday between 09:00 and 17:00</p></div>
+			</div>
+			
+	
+		</div>
+	<div class="middle">
+	<img src="<%= s.picture %>" alt="Map">
+	</div>
 </div>
 

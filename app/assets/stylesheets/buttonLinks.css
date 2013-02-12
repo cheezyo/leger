@@ -44,9 +44,7 @@
 	background:#bf0000;
 }
 
-textarea{
-	background:#fff;
-}
+
 
 #links{
 	margin-top:30px;
@@ -82,20 +80,7 @@ textarea{
 	border-radius:10px;
 	
 }
-label{
-	padding:5px;
-	font-weight: bold;
-	color:#000;
-}
 
-input{
-	padding:5px;
-	border-radius:10px;
-}
-input:focus{
-	border-radius:0px;
-
-}
 input[type=button], input[type=submit], button{
 	background:#00611C;
 	cursor: pointer;
@@ -105,6 +90,8 @@ input[type=button], input[type=submit], button{
 }
 .field{
 	margin-bottom:20px;
+	width:100%;
+	float:left;
 }
 #delete{
 	color:#bf0000;
@@ -129,28 +116,5 @@ input[type=button], input[type=submit], button{
 	font-weight: normal;
 	box-shadow: 2px 2px 3px #666;
 }
-.actions{
-	width:auto;
-	height:auto;
-	float:left;
-}
-#booking{
-	width:360px;
-	height:auto;
-	float:left;
-}
-#booking input[type=text],input[type=email], textarea{
-	float:left;
-	padding:0px;
-	margin:0px;
-}
-#booking label{
-	margin:0px;
-	font-size:14px;
-	font-weight: normal;
-	font-style: italic;
-}
 
-.underline{
-	text-decoration: underline;
-}
+
