@@ -75,19 +75,32 @@ h1, h2, h3, h4, h5, h6{
 	padding:0 6px 0 0;
 	
 }
-.subMenuLeftBox a{
+.subMenuLeftBox li a{
 	color:#06396D;
 	text-decoration: none;
-	width:100%;
-	float:left;
+	
 }
 .subMenuLeftBox a:hover{
 	text-decoration: underline;
 }
+
+
+.subMenuLeftBox ul {
+	margin:0;
+	float:left;
+	width:100%;
+	padding:0 0 0 20px;
+	color:#06396D;
+}
+.subMenuLeftBox li  {
+	padding:0 0 5px 0;
+}
+
+
 #kirurgi{
 	width: 930px;
 	padding:0 15px 0 15px;
-	min-height: 210px;
+	min-height: 260px;
 	margin:-1px auto;
 	z-index: 30;
 	opacity:0.9;
@@ -106,12 +119,24 @@ h1, h2, h3, h4, h5, h6{
 	display: none;
 	background-color:#fff;
 }
-#hud a{
-	color:#000;
-	float:left;
-	padding:10px;
+#hud li a{
+	color:#06396D;
 	text-decoration: none;
 }
+
+
+#hud ul {
+	margin:0;
+	float:left;
+	padding:0 0 0 20px;
+	color:#06396D;
+}
+#hud li  {
+	padding:0 20px 0 0;
+}
+
+
+
 #hud a:hover{
 	text-decoration: underline;
 }
@@ -269,6 +294,8 @@ h1, h2, h3, h4, h5, h6{
 .margin-top{
 	margin-top:20px;
 }
+
+/* CONTACT US */
 #booking{
 	width:360px;
 	height:auto;
@@ -322,3 +349,5 @@ h1, h2, h3, h4, h5, h6{
 	float:left;
 
 }
+
+/* END CONTACT US */
