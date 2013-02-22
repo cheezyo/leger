@@ -11,10 +11,13 @@ class KirurgisController < ApplicationController
 
   def new
     @kirurgi = Kirurgi.new
+    render :layout => 'admin'
   end
 
   def edit
     @kirurgi = Kirurgi.find(params[:id])
+    
+    render :layout => 'admin'
   end
 
   def create

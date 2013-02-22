@@ -14,11 +14,13 @@ class LegersController < ApplicationController
 
   def new
     @leger = Leger.new
+    render :layout => 'admin'
 
   end
 
   def edit
     @leger = Leger.find(params[:id])
+    render :layout => 'admin'
   end
 
 

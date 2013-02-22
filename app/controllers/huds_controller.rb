@@ -13,10 +13,12 @@ class HudsController < ApplicationController
 
   def new
     @hud = Hud.new
+    render :layout => 'admin'
   end
 
   def edit
     @hud = Hud.find(params[:id])
+    render :layout => 'admin'
   end
 
   def create

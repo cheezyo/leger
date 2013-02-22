@@ -9,7 +9,7 @@ class PagesController < ApplicationController
     
   end
   def admin 
-    
+     render :layout => 'admin'
   end
   
   def about

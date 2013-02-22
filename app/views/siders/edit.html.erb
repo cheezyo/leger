@@ -1,6 +1,3 @@
-<h3>Rediger --> <%= @sider.title %></h3>
+<h1 class="moveDown">Rediger <%= @sider.title %></h1>
 
 <%= render 'form' %>
-<div id="actions">
-    <%= link_to 'Slett siden', @sider, method: :delete, :class=> "delete-button", data: { confirm: 'Er du sikker på at du vil slette denne siden?' } %>
-</div>

@@ -13,47 +13,75 @@
 <div class="margin-top"></div>
 
   <div class="field">
-    <%= f.label 'Navn' %><br />
+  	<div class="labelField">
+    <%= f.label 'Navn' %>
+    </div>
+    <div class="inputField">
     <%= f.text_field :name %>
+    </div>
   </div>
     <div class="field">
-    <%= f.label 'Kjønn', :class => 'underline'%><br />
+    	<div class="labelField">
+    <%= f.label 'Kjønn', :class => 'underline'%>
+    </div>
+    <div class="inputField">
 	<% ['Man', 'Kvinne'].each do |gender| %>
 		<%= f.radio_button :gender, gender %>
 		<%= f.label gender%>
 		
 	<% end %>
+	</div>
   </div>
     <div class="field">
+<div class="labelField">
+  	   	<%= f.label 'Alder'%>
+  	   	</div>
 
-  	   <%= f.label 'Alder'%><br />
+  	   	<div class="inputField">
   	   	<%= f.number_field :age, :class => 'age'%>
-  	  
+  	  </div>
   	  
   </div>
   <div class="field">
-    <%= f.label :email %><br />
+  	<div class="labelField">
+    <%= f.label :email %>
+    </div>
+    <div class="inputField">
     <%= f.email_field  :email %>
+    </div>
   </div>
   <div class="field">
-    <%= f.label 'Telefon' %><br />
+  	<div class="labelField">
+    <%= f.label 'Telefon' %>
+    </div>
+    <div class="inputField">
     <%= f.text_field :phone %>
+    </div>
   </div>
    <div class="field">
   	<br/>
-    <%= f.label 'Konsultasjon', :class => 'underline' %><br/>
-	<% ['Plastisk kirurgi', 'Hudbehandlinger'].each do |consoltion|%>
+  	<div class="labelField">
+    <%= f.label 'Konsultasjon', :class => 'underline' %>
+    </div>
+    <div class="inputField">
+	<% ['Plastisk kirurgi', 'Hudbehandling'].each do |consoltion|%>
 	<%= f.radio_button :consoltion, consoltion%>
 	<%= f.label consoltion %>
 	<% end %>
-	
+	</div>
   </div>
   <div class="field">
-    <%= f.label 'Mer info' %><br />
+  	<div class="labelField">
+    <%= f.label 'Mer info' %>
+   
+    </div>
+   <div class="inputField">
     <%= f.text_area :message, :cols => 25, :rows => 6 %>
+     <%= f.submit 'Send' %>
+    </div>
   </div>
   <div class="actions">
-    <%= f.submit 'Send' %>
+    
   </div>
 <% end %>
 

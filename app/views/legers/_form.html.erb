@@ -10,25 +10,27 @@
       </ul>
     </div>
   <% end %>
-
+<fieldset class="fieldWrapper">
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label "Navn" %><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :position %><br />
+    <%= f.label "Posisjon" %><br />
     <%= f.text_field :position %>
   </div>
   <div class="field">
-    <%= f.label :picture %><br />
+    <%= f.label "Bilde url" %><br />
     <%= f.text_field :picture  %>
   </div>
   <div class="field">
-    <%= f.label :info %><br />
+    <%= f.label "Bio" %><br />
     <%= f.text_area :info, :cols => 40, :rows => 15, :class => "widgEditor" %>
   </div>
+  </fieldset>
   <div class="actions">
     <%= f.submit 'Lagre' %>
     <%= link_to 'Avbryt', "/admin", :class => "cancel", data: { confirm: 'Er du sikker på at du vil avbryte uten å lagre?' }%>
+    <%= link_to 'Slett', @leger, method: :delete, :class => "cancel", data: { confirm: 'Er du sikker på at du vil slette ansatt?' } %>
   </div>
 <% end %>

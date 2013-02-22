@@ -1,10 +1,10 @@
 <div id="leftSide">
 		
 	<img src="<%= Type.find(@info.type_id).picture %>" alt="bilde"/>
-	<%= link_to 'Bestil time', root_path, :class => 'button'%>
+	<%= link_to 'Bestil time', "/kontakt", :class => 'button'%>
 	</div>
 <div id="centerSection">
-	<h1><%= @info.name %></h1>
+	<h3><%= @info.name %></h3>
 	<%= simple_format @info.content %>
 </div>
 <div id="rightSide">

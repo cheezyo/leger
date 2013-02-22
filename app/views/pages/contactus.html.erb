@@ -2,7 +2,7 @@
 		<% if Sider.find(:all).count > 0 %>
 
 	<% if s =  Sider.find_by_title("Kontakt oss") %>
-	<h1> <%= s.title %></h1>
+	<h3> <%= s.title %></h3>
 	<%= sanitize s.content %>
 	<% end %>
 	<% else %>
@@ -11,7 +11,7 @@
 	<%= render :partial => 'bookings/form'  %> 
 	</div>
 <div id="contactUs">
-	<h1>Her finner du oss</h1>
+	<h3>Her finner du oss</h3>
 	<div id="contact-info">
 			<div class="info-wrapper">
 			<div class="thumb-row"><img src="https://dl.dropbox.com/u/7238474/leger/book.png" /></div>

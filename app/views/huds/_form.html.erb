@@ -10,30 +10,38 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+<div class="fieldWrapper">
+<fieldset class="colored">
+	<div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
-  </div>
-    <div class="field">
+
+</div>
+<div class="field">
       <%= f.label :picture, "Bilde" %><br />
   <%= f.text_field :picture %>
-  </div>
-  <div class="field">
+</div>
+<div class="field">
     <%= f.label :content %><br />
     <%= f.text_area :content, :cols => 40, :rows => 15, :class => "widgEditor" %>
-  </div>
- 
+</div>
+
+ </fieldset>
   <%= f.fields_for :behandlingers do |builder|%>
  
   	<%= render 'behandlinger_fields', f: builder %>
   	
   <% end %>
+    <%= link_to_add_fields "Legg til underside", f, :behandlingers, "green"%>
+  </div>
 
-	 <%= link_to_add_fields "Legg til underside", f, :behandlingers, "child-links"%>
+<div class="endFormsWrapper">
+	 
 
   <div class="actions">
     <%= f.submit 'Lagre' %>
     <%= link_to 'Avbryt', "/admin", :class => "cancel",data: { confirm: 'Er du sikker på at du vil avbryte uten å lagre?' } %>
+        <%= link_to 'Slett hele', @hud, method: :delete, :class => "cancel", data: { confirm: 'Er du sikker på at du vil slette hele kategorien?' } %>
   </div>
 <% end %>
+</div>

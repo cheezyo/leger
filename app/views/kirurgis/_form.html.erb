@@ -21,12 +21,18 @@
   	<%= render 'type_fields', f: builder %>
   <% end %>
 
-  <%= link_to_add_fields "Legg ny behandling i denne kategorien", f, :types,"links" %>
+
+
+
+<div class="endFormsWrapper">
+  <%= link_to_add_fields "Legg ny behandling i denne kategorien", f, :types,"green"%>
 
 
   <div class="actions">
-  	  <h5>Ferdig med å redigere? Lagre eller avbryt</h5>
+  	<h5>Ferdig med å redigere? Lagre eller avbryt</h5>
     <%= f.submit 'Lagre' %>
-    <%= link_to 'Avbryt', "/admin", :class => "cancel",data: { confirm: 'Er du sikker på at du vil avbryte uten å lagre?' } %>
+    <%= link_to 'Avbryt', "/admin" ,{ confirm: 'Er du sikker på at du vil avbryte uten å lagre?', :class => 'cancel' } %>
+    <%= link_to 'Slett hele', @kirurgi, method: :delete, :class => "cancel", data: { confirm: 'Er du sikker på at du vil slette hele kategorien?' } %>
   </div>
 <% end %>
+</div>

@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-
+<fieldset class="fieldWrapper">
   <div class="field">
     <%= f.label 'Navn' %><br />
     <%= f.text_field :title %>
@@ -23,8 +23,10 @@
     <%= f.label 'Innhold' %><br />
     <%= f.text_area :content, :cols => 40, :rows => 100, :class => "widgEditor"  %>
   </div>
+  </fieldset>
   <div class="actions">
     <%= f.submit 'Lagre' %>
     <%= link_to 'Avbryt', "/admin", :class => "cancel",data: { confirm: 'Er du sikker på at du vil avbryte uten å lagre?' } %>
+    <%= link_to 'Slett siden', @sider, method: :delete, :class=> "cancel", data: { confirm: 'Er du sikker på at du vil slette denne siden?' } %>
   </div>
 <% end %>

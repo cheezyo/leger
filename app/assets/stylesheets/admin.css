@@ -23,12 +23,20 @@
 }
 
 .admin-button {
-	margin-left:40px;
-	width:auto;
+	margin:20px 20px 20px 10px;
+	display:block;
+	text-align:center;
 	border-radius:5px;
 	color:#fff;
 	font-size:12px;
 	padding:5px;
 	background:#546787;
 	text-decoration:none;
+}
+
+#admin{
+	width:100%;
+	float:left;
+	height:auto;
+	overflow:hidden;
 }

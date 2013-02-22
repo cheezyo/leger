@@ -14,11 +14,13 @@ class SidersController < ApplicationController
 
   def new
     @sider = Sider.new
+    render :layout => 'admin'
   end
 
 
   def edit
     @sider = Sider.find(params[:id])
+    render :layout => 'admin'
   end
 
 
