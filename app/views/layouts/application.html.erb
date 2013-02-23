@@ -7,33 +7,7 @@
 		<%= csrf_meta_tags %>
 		</head>
 		<body <%if !current_user %>style="overflow:hidden;"<%end%>>
-			
-	<script>
-$(function() {
-
-	$("#box").dialog({
-		title: 'Hey',
-		width: 500,
-		minHeight:100,
-		maxHeight:500,
-		buttons: [
-			{ 
-				text: "Ok", 
-				click: function() { 
-					$( this ).dialog( "close" ); 
-				} 
-			}
-		]
-	});
-	
-	
-});
 		
-	</script>
-	
-	<script>
-		confirm("DFdf2");
-	</script>		
 <div id="headerWrapper">
 	<div id="header">
 	
