@@ -177,22 +177,23 @@ p{
 }
 #wideSection {
 	float: left;
-	width: 695px;
+	width: 745px;
 	height: auto;
 	background: #fff;
 	padding: 15px;
 }
 #rightSide {
 	float: left;
-	width: 150px;
+	width: 115px;
 	height: auto;
 	background: #fff;
-	padding: 15px 10px 15px 15px;
+	padding: 15px 0px 15px 0px;
 }
 
 #rightSide a {
 	float: left;
 	width: 100%;
+	margin:5px 0 0 0;
 	text-decoration: none;
 	color: #0000FF;
 	line-height: 1.5;
@@ -217,17 +218,17 @@ p{
 }
 #leftSide {
 	float: left;
-	width: 200px;
+	width: 250px;
 	height: auto;
 	background: #fff;
-	padding: 15px;
+	padding: 15px 0 15px 15px;
 }
 
 #rightSide img {
 	width: 200px;
 }
 #leftSide img {
-	width: 200px;
+	width: 245px;
 }
 #centerSection {
 	float: left;
@@ -264,12 +265,12 @@ p{
 #gallery {
 	margin: 0 auto;
 	width: 800px;
-	height: 480px;
+	height: 380px;
 }
 #gallery img {
 	margin: 0 auto;
 	width: 800px;
-	height: 474px;
+	height: 374px;
 }
 #thumbwrapper {
 	width: 800px;
@@ -284,8 +285,13 @@ p{
 /* END GALLERY */
 
 /* DOCTORS */
+.doctor {
+	float:left;
+	width:350px;
+	margin:20px 20px 0 0;
+}
 .doctor img {
-	width: 200px;
+	width: 150px;
 	float: left;
 	padding: 0 10px 5px 0;
 }
