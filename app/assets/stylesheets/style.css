@@ -388,3 +388,29 @@ p{
 }
 
 /* END CONTACT US */
+
+
+/* Picture text */
+
+.overlay{
+	opacity:0.6;
+	color:#fff;
+	background:#000;
+	height:100px;
+	margin:350px 0 0 0px ;
+	width:310px;
+	position: absolute;
+	border-radius:0px 10px 0 10px;
+	z-index: 1;
+}
+.overlay-text{
+	color:#fff;
+	margin:350px 0px 0 0px;
+	width:290px;
+	padding:10px;
+	
+	position:absolute;
+	z-index: 1000;
+
+	
+}

@@ -19,6 +19,10 @@
 	
 }
 
+#slider img {
+	width:930px;
+}
+
 /******************
   SET STYLING HERE
  ******************
@@ -112,7 +116,7 @@
 	display: block;
 	overflow: visible !important;
 	position: relative;
-		border-radius:10px;	
+	border-radius:10px;	
 }
 /* anythingSlider viewport window */
 .anythingSlider .anythingWindow {
