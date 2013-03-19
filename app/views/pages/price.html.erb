@@ -1,0 +1,54 @@
+<script>
+
+function renderPrice(n){
+	var x=document.getElementById("wideSection");
+			 var y = document.getElementById(n);
+  			 x.innerHTML= y.innerHTML;
+	
+	
+}
+
+</script>
+
+<div id="rightSide">
+	<% n = 1 %>
+	<% Kirurgi.find(:all).each do |k| %>
+ <a href="#" onclick="renderPrice(<%=n%>)"> <%= k.name %></a>
+	<br />
+	
+	<div id="<%= n %>" style="display: none;">
+	<% k.types.each do |t| %>
+		
+			<%= t.title %> <%= t.price %>
+							<br />
+			
+	<% end %>	
+		
+	</div>
+	
+	
+	
+	<% n+= 1 %>
+	<% end %>
+	<a href="#" onclick="renderPrice(<%= n %>)">Hudbehandlinger</a>
+	
+	<div id="<%= n %>" style="display: none;">
+	<% Hud.find(:all).each do |h| %>
+							<%= h.title %> <%= h.price %>
+							<br />
+							<% end %>
+</div>
+	
+	
+</div>
+
+<div id="wideSection">
+	
+
+</div>
+<div id="1" style="display: none;">
+	<% Type.find(:all).each do |t| %>
+							<%= t.title %> <%= t.price %>
+							<br />
+							<% end %>
+</div>
