@@ -10,7 +10,7 @@ function renderPrice(n){
 
 </script>
 
-<div id="rightSide">
+<div id="rightSidePrice">
 	<% n = 1 %>
 	<% Kirurgi.find(:all).each do |k| %>
  <a href="#" onclick="renderPrice(<%=n%>)"> <%= k.name %></a>

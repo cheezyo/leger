@@ -206,9 +206,10 @@ a{
 	float: left;
 	width: 115px;
 	height: auto;
-
+	margin:25px 0 0 0;
 	padding: 15px 0px 15px 15px;
 }
+
 
 #rightSide a {
 	float:left;
@@ -275,6 +276,25 @@ a{
 #footer p {
 	font-size: 0.8em;
 }
+
+
+/* PRICE */
+#rightSidePrice {
+	float: left;
+	width: 115px;
+	height: auto;
+	padding: 15px 15px 15px 15px;
+}
+#rightSidePrice a {
+	float:left;
+	width: 100%;
+	margin:5px 0 0 0;
+	text-decoration: none;
+
+	line-height: 1.5;
+}
+/* END PRICE */
+
 
 /* GALLERY */
 #gallerywrapper {
