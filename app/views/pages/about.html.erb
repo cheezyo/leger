@@ -2,7 +2,7 @@
 	<h1></h1>
 		<% if Sider.find(:all).count > 0 %>
 
-	<% if s =  Sider.find_by_title("Om oss") %>
+	<% if s =  Sider.find_by_title("Klinikken") %>
 <img src="<%= s.picture %>">
 </div>
 
@@ -18,7 +18,7 @@
 
 
 <div id="rightSide">
-		<%= link_to "Om oss", "/omoss", :class => "at"  %>
+		<%= link_to "Klinikken", "/omoss", :class => "at"  %>
 		<%= link_to "Ansatte", legers_path%>
 		<%= link_to "Bilder", "/gal" %>
 </div>
