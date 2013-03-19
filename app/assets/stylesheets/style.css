@@ -129,13 +129,14 @@ a{
 	background-color: #fff;
 }
 #hud {
-	width: 930px;
+	width: 180px;
 	padding: 10px 15px 0 15px;
-	margin: 10px auto;
+	margin: 18px 0 0 150px;
 	z-index: 30;
-	border-radius:10px 10px 0 0;
-	min-height: 40px;
+
+	height: auto;
 	display: none;
+	position:absolute;
 	background-color: #fff;
 }
 #hud li a {
@@ -146,9 +147,10 @@ a{
 
 #hud ul {
 	margin: 0;
-	float: left;
-	padding: 0 0 0 20px;
+	
+	padding: 0 0 0 0;
 	color: #90465D;
+	list-style: none;
 }
 #hud li {
 
