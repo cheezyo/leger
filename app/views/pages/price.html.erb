@@ -16,13 +16,6 @@ function renderPrice(n, clickedlink, tot){
   			 		document.getElementById(temp).style.background = "#fff";
   			 	}
   			 }
-  			 
-  			 
-  			 
-  			 
-  			 
-			 
-	
 }
 
 </script>
@@ -32,7 +25,7 @@ function renderPrice(n, clickedlink, tot){
 		<% total = Kirurgi.count + Hud.count %>
 		
 	<% Kirurgi.find(:all).each do |k| %>
-	 	<a href="#" id="link<%= n %>" onclick="renderPrice(<%=n%>, '<%= "link" + n.to_s%>', '<%= total%>')"  > <%= k.name %></a><br />
+	 	<a href="#" id="link<%= n %>" onclick="renderPrice(<%=n%>, '<%= "link" + n.to_s%>', '<%= total%>')" <% if n == 1 %> style="background:#CDE4F2;" <% end %>> <%= k.name %></a><br />
 		
 		<div id="<%= n %>" style="display: none;">
 			<h3 style="padding:0 0 10px 0;">Pris liste</h3>
@@ -59,6 +52,15 @@ function renderPrice(n, clickedlink, tot){
 </div>
 
 <div id="widePrice">
+	<% Kirurgi.find(:all).each do |ki| %>
+	<div id="<%= n %>" >
+			<h3 style="padding:0 0 10px 0;">Pris liste</h3>
+			<% ki.types.each do |ti| %>
+				<div class="price"><p><%= ti.title %> ................... <%= ti.price %></p></div><br />
+			<% end %>
+			<% break %>
+			<% end %>
+		</div>
 	
 
 </div>
