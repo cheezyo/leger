@@ -289,17 +289,38 @@ a{
 /* PRICE */
 #rightSidePrice {
 	float: left;
-	width: 115px;
+	width: 200px;
 	height: auto;
-	padding: 15px 15px 15px 15px;
+	padding: 15px 0px 15px 15px;
 }
 #rightSidePrice a {
 	float:left;
 	width: 100%;
 	margin:5px 0 0 0;
 	text-decoration: none;
-
+	border-radius:0 20px 20px 0;
+	width:130px;
+	padding:5px;
 	line-height: 1.5;
+}
+
+#widePrice{
+	float: left;
+	width: 700px;
+	height: auto;
+	
+	padding: 15px 0px 15px 15px;
+}
+
+.price{
+	float:left;
+	padding:0;
+}
+
+.price p{
+	padding:0;
+	margin:0;
+	
 }
 /* END PRICE */
 
@@ -489,3 +510,5 @@ a{
 
 	
 }
+
+

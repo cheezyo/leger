@@ -1,12 +1,13 @@
 
 <div id="leftSide">
-			<h3><%= @leger.name %></h3>
+			
 			<img src="<%= @leger.picture%>" />
 			<p><%= @leger.position %></p>
 			<p><%= @leger.telf%></p>
 			<a href="mailto:<%= @leger.email %>"><%= @leger.email %></a>
 	</div>
 <div id="centerSection">
+	<h3><%= @leger.name %></h3>
 <p><%= sanitize @leger.info%></p>
 </div>
 <div id="rightSide">

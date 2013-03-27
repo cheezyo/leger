@@ -1,10 +1,27 @@
 <script>
 
-function renderPrice(n){
-	var x=document.getElementById("wideSection");
+function renderPrice(n, clickedlink, tot){
+	var x=document.getElementById("widePrice");
 			 var y = document.getElementById(n);
   			 x.innerHTML= y.innerHTML;
-	
+		 
+  			
+  			 for(var i = 1; i < tot; i++){
+  			 	if(n == i){
+  			 		
+  			 		document.getElementById(clickedlink).style.background = "#CDE4F2";
+  			 	}else{
+  			 		var temp = "link"+i;
+
+  			 		document.getElementById(temp).style.background = "#fff";
+  			 	}
+  			 }
+  			 
+  			 
+  			 
+  			 
+  			 
+			 
 	
 }
 
@@ -12,32 +29,36 @@ function renderPrice(n){
 
 <div id="rightSidePrice">
 		<% n = 1 %>
+		<% total = Kirurgi.count + Hud.count %>
+		
 	<% Kirurgi.find(:all).each do |k| %>
-	 	<a href="#" onclick="renderPrice(<%=n%>)"> <%= k.name %></a><br />
+	 	<a href="#" id="link<%= n %>" onclick="renderPrice(<%=n%>, '<%= "link" + n.to_s%>', '<%= total%>')"  > <%= k.name %></a><br />
 		
 		<div id="<%= n %>" style="display: none;">
+			<h3 style="padding:0 0 10px 0;">Pris liste</h3>
 			<% k.types.each do |t| %>
 				
-					<%= t.title %> <%= t.price %><br />
+				<div class="price">	<p><%= t.title %> ................... <%= t.price %></p></div><br />
 			<% end %>	
 			
 		</div>
-	
+		
 		<% n+= 1 %>
 	<% end %>
 		
-		<a href="#" onclick="renderPrice(<%= n %>)">Hudbehandlinger</a>
+		<a href="#" id="link<%= n %>" onclick="renderPrice(<%= n %>, '<%= "link"+n.to_s%>', '<%= total%>')">Hudbehandlinger</a>
 		
 		<div id="<%= n %>" style="display: none;">
+			<h3 style="padding:0 0 10px 0;">Pris liste</h3>
 			<% Hud.find(:all).each do |h| %>
-				<%= h.title %> <%= h.price %><br />	
+				<div class="price"><p><%= h.title %> ................... <%= h.price %></p></div><br />
 			<% end %>
 		</div>
 		
 		
 </div>
 
-<div id="wideSection">
+<div id="widePrice">
 	
 
 </div>
