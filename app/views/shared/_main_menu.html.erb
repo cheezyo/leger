@@ -1,0 +1,55 @@
+	<div id="navWrapper">
+			<div id="nav">
+				<%= link_to 'Hjem', root_path %>
+
+				<a href="javascript:void(0)"  onclick="showHud('hud', 0, 'k');showKirurgi('kirurgi', 1, 'c');" id="k"> Hudbehandlinger</a>
+				<a href="javascript:void(0)"  onclick="showKirurgi('kirurgi', 0, 'c');showHud('hud', 1, 'k');" id="c"> Kirurgi</a>
+				<%= link_to 'Klinikken', "/klinikken" %>
+				<%= link_to 'Priser', "/priser" %>
+				<%= link_to 'Kontakt oss', "/kontaktoss" %>
+			</div>
+		</div>
+
+		<div id="subMenuWrapper">
+			<div id="kirurgi">
+				<% if Kirurgi.find(:all).count > 0 %>
+
+				<% Kirurgi.find(:all, :order => 'name ASC').each do |k| %>
+				<div class="subMenuLeftBox">
+					<p class="category">
+						<%= k.name %>
+					</p>
+					<ul>
+						<% k.types.each do |t|%>
+						<li>
+							<%= link_to t.title, t %>
+						</li>
+						<%end%>
+					</ul>
+				</div>
+				<% end %>
+				<% end %>
+			</div>
+			
+
+		</div>
+		
+<div id="wrapper">
+			<% flash.each do |key, value| %>
+			<div class="flash<%= key  %>">
+				<%= value %>
+			</div>
+			<% end %>
+			
+			<div id="hud">
+				<% if Hud.find(:all).count > 0 %>
+				<ul>
+					<% Hud.find(:all, :order => 'title ASC').each do |h| %>
+					<li>
+						<%= link_to h.title, h %>
+
+					</li>
+					<% end %>
+				</ul>
+				<% end %>
+			</div>

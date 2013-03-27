@@ -11,44 +11,33 @@ function renderPrice(n){
 </script>
 
 <div id="rightSidePrice">
-	<% n = 1 %>
+		<% n = 1 %>
 	<% Kirurgi.find(:all).each do |k| %>
- <a href="#" onclick="renderPrice(<%=n%>)"> <%= k.name %></a>
-	<br />
-	
-	<div id="<%= n %>" style="display: none;">
-	<% k.types.each do |t| %>
+	 	<a href="#" onclick="renderPrice(<%=n%>)"> <%= k.name %></a><br />
 		
-			<%= t.title %> <%= t.price %>
-							<br />
+		<div id="<%= n %>" style="display: none;">
+			<% k.types.each do |t| %>
+				
+					<%= t.title %> <%= t.price %><br />
+			<% end %>	
 			
-	<% end %>	
-		
-	</div>
+		</div>
 	
-	
-	
-	<% n+= 1 %>
+		<% n+= 1 %>
 	<% end %>
-	<a href="#" onclick="renderPrice(<%= n %>)">Hudbehandlinger</a>
-	
-	<div id="<%= n %>" style="display: none;">
-	<% Hud.find(:all).each do |h| %>
-							<%= h.title %> <%= h.price %>
-							<br />
-							<% end %>
-</div>
-	
-	
+		
+		<a href="#" onclick="renderPrice(<%= n %>)">Hudbehandlinger</a>
+		
+		<div id="<%= n %>" style="display: none;">
+			<% Hud.find(:all).each do |h| %>
+				<%= h.title %> <%= h.price %><br />	
+			<% end %>
+		</div>
+		
+		
 </div>
 
 <div id="wideSection">
 	
 
-</div>
-<div id="1" style="display: none;">
-	<% Type.find(:all).each do |t| %>
-							<%= t.title %> <%= t.price %>
-							<br />
-							<% end %>
 </div>

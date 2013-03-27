@@ -5,73 +5,10 @@
 		<%= stylesheet_link_tag    "application", :media => "all" %>
 		<%= javascript_include_tag "application" %>
 		<%= csrf_meta_tags %>
-		</head>
-		<body <%if !current_user %>style="overflow:hidden;"<%end%>>
-			
-			
-<div id="headerWrapper">
-	<div id="header">
-	
-		<div id="logo">
-			
-		</div>
-	
-	</div>		
-</div>
 
+<%= render '/shared/header' %>
 
-
-<div id="navWrapper">
-	<div id="nav">
-		<%= link_to 'Hjem', root_path %> 
-			
-				
-				<a href="javascript:void(0)"  onclick="showHud('hud', 0, 'k');showKirurgi('kirurgi', 1, 'c');" id="k"> Hudbehandlinger</a>	
-				<a href="javascript:void(0)"  onclick="showKirurgi('kirurgi', 0, 'c');showHud('hud', 1, 'k');" id="c"> Kirurgi</a>
-				<%= link_to 'Klinikken', "/omoss" %>
-				<%= link_to 'Priser', "/pris" %>
-				<%= link_to 'Kontakt oss', "/kontakt" %>
-	</div>
-</div>
-
-
-<div id="subMenuWrapper">
-	<div id="kirurgi">
-		<% if Kirurgi.find(:all).count > 0 %>
-
-				<% Kirurgi.find(:all, :order => 'name ASC').each do |k| %>
-				<div class="subMenuLeftBox">
-					<p class="category"><%= k.name%></p>
-					<ul>
-					<% k.types.each do |t|%>
-					<li>
-						<%= link_to t.title, t %>
-					</li>
-					<%end%>
-				</ul>
-				</div>
-				<% end %>
-				<% end %>
-		</div>
-	<div id="hud">
-		<% if Hud.find(:all).count > 0 %>
-				<ul>
-				<% Hud.find(:all, :order => 'title ASC').each do |h| %>
-				<li>
-					<%= link_to h.title, h %>
-					
-				</li>
-				<% end %>
-				</ul>
-				<% end %>
-		</div>
-
-</div>
-
-<div id="wrapper">
-	<% flash.each do |key, value| %>
-           <div class="flash<%= key  %>"><%= value %></div>
-          <% end %>
+<%= render '/shared/main_menu' %>
 	<div id="innerWrapper">
 		
 			<div id="admin">
@@ -89,14 +26,9 @@
 
 
 
+			<%= render '/shared/footer' %>
 			
-			
-		<div id="footerWrapper">	
-		<div id="footer">
-			
-		<p>Chr klinikken <b>Adresse:</b> veien 78b <b>Telefon:</b> 999 99 999</p>
-		</div>
-		</div>		
+	
 			
 
 		</body>

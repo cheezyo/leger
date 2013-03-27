@@ -5,7 +5,7 @@
 		<% Leger.find(:all, :order => 'name ASC').each do |lege|%>
 
 		<div class="doctor">
-			<a class="nonLink" href="legers/<%= lege.id %>">
+			<a class="nonLink" href="ansatte/<%= lege.id %>">
 			<h3><%= lege.name %></h3>
 			<p><%= lege.position %></p>
 			<img src="<%= lege.picture%>" />
@@ -18,7 +18,7 @@
 
 	<div id="rightSide">
 
-		<%= link_to "Klinikken", "/omoss"  %>
+		<%= link_to "Klinikken", "/klinikken"  %>
 		<%= link_to "Ansatte", legers_path, :class => "at"%>
 		<%= link_to "Bilder", "/gal" %>
 	</div>

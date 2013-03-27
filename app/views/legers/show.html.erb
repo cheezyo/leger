@@ -1,32 +1,23 @@
 
-	<div id="wideSection">
-
-		
-
-		<div class="doctorShow">
-		
-			
-			<img src="<%= @leger.picture%>" />
+<div id="leftSide">
 			<h3><%= @leger.name %></h3>
+			<img src="<%= @leger.picture%>" />
 			<p><%= @leger.position %></p>
 			<p><%= @leger.telf%></p>
 			<a href="mailto:<%= @leger.email %>"><%= @leger.email %></a>
-			
-		</div>
-		<div class="doctorShowText">
-			<p><%= sanitize @leger.info%></p>
-		</div>
 	</div>
-
-	<div id="rightSide">
-		<%= link_to "Alle", legers_path%>
+<div id="centerSection">
+<p><%= sanitize @leger.info%></p>
+</div>
+<div id="rightSide">
+<%= link_to "Alle", legers_path%>
 		<% Leger.find(:all, :order => 'name ASC').each do |lege|%>
 			
-			<% unless lege == @leger %>
-			<a  href="<%= lege.id %>"><%= lege.name %></a>
 			
-			<% end %>
+			<a  href="<%= lege.id %>" <% if lege == @leger %> class="at" <% end %>><%= lege.name %></a>
+			
+		
 		
 		<% end %>
-	
-	</div>
+</div>
+

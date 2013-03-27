@@ -7,22 +7,22 @@ Legekontor::Application.routes.draw do
   resources :bookings
 
   resources :siders
-
-  resources :huds
-
-
+  resources :huds, :path => "hudbehandling"
 
    root to: 'pages#home'
-   match "/omoss" => "pages#about"
+   match "/klinikken" => "pages#about"
    match "/admin" => "pages#admin"
-   match "/pris" => "pages#price"
-   match "/kontakt" => "pages#contactus"
+   match "/priser" => "pages#price"
+   match "/kontaktoss" => "pages#contactus"
    match "/gal" => "pages#gal"
 
-  resources :kirurgis, :types, :infos, :legers,:behandlingers
+  resources :kirurgis, :path => "b"
+  resources :types, :path => "behandling/t"
+  resources :infos, :path => "behandling/i"
+  resources :legers,:path => "ansatte"
+  resources :behandlingers
   
-
-  # The priority is based upon order of creation:
+    # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:

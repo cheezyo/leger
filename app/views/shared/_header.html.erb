@@ -1,0 +1,40 @@
+		<script>
+		
+				window.onload = function() {
+			if (screen.height < 770) {
+				document.body.style.zoom = "90%";
+			}else if(screen.height > 1000){
+				document.body.style.zoom = "125%";
+			}
+		};
+			// DOM Ready
+			$(document).ready(function() {
+				$('#slider').anythingSlider({
+					autoPlay : true,
+					autoPlayLocked : true,
+					resumeDelay : 1000,
+					hashTags : false,
+					delay : 10000,
+					buildNavigation : false,
+					buildArrows : false,
+					buildStartStop : false,
+					pauseOnHover : true
+				});
+
+				$('.start-stop').hide();
+
+			});
+		</script>
+	</head>
+
+	<body <%if !current_user %>style="overflow:hidden;"<%end%>>
+	
+		<div id="headerWrapper">
+			<div id="header">
+
+				<div id="logo">
+
+				</div>
+
+			</div>
+		</div>

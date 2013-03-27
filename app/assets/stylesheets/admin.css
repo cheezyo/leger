@@ -34,8 +34,8 @@
 }
 
 #admin{
-	width:100%;
-	float:left;
+	width: 960px;
+	padding:10px;
 	height:auto;
 	overflow:hidden;
 }
