@@ -31,7 +31,7 @@ function renderPrice(n, clickedlink, tot){
 			<h3 style="padding:0 0 10px 0;">Pris liste</h3>
 			<% k.types.each do |t| %>
 				
-				<div class="price">	<p><%= t.title %> ................... <%= t.price %></p></div><br />
+				<div class="price">	<p><%= t.title %> ........ <%= t.price %></p></div><br />
 			<% end %>	
 			
 		</div>
@@ -44,7 +44,7 @@ function renderPrice(n, clickedlink, tot){
 		<div id="<%= n %>" style="display: none;">
 			<h3 style="padding:0 0 10px 0;">Pris liste</h3>
 			<% Hud.find(:all).each do |h| %>
-				<div class="price"><p><%= h.title %> ................... <%= h.price %></p></div><br />
+				<div class="price"><p><%= h.title %> ........ <%= h.price %></p></div><br />
 			<% end %>
 		</div>
 		
@@ -56,7 +56,7 @@ function renderPrice(n, clickedlink, tot){
 	<div id="<%= n %>" >
 			<h3 style="padding:0 0 10px 0;">Pris liste</h3>
 			<% ki.types.each do |ti| %>
-				<div class="price"><p><%= ti.title %> ................... <%= ti.price %></p></div><br />
+				<div class="price"><p><%= ti.title %> ........ <%= ti.price %></p></div><br />
 			<% end %>
 			<% break %>
 			<% end %>
