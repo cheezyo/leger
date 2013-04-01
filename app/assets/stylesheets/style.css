@@ -211,7 +211,7 @@ a{
 }
 #rightSide {
 	float: left;
-	width: 115px;
+	width: 215px;
 	height: auto;
 	margin:25px 0 0 0;
 	padding: 15px 0px 15px 15px;
@@ -219,13 +219,13 @@ a{
 
 
 #rightSide a {
-	float:left;
-	width: 100%;
+	float:right;
+	width: 150px;
 	margin:5px 0 0 0;
 	text-decoration: none;
-	padding:5px 0 5px 5px;
+	padding:5px 5px 5px 5px;
 	line-height: 1.5;
-	text-align: center;
+	text-align: right;
 }
 #rightSide a:visited {
 
@@ -247,7 +247,7 @@ a{
 }
 #leftSide {
 	float: left;
-	width: 250px;
+	width: 280px;
 	height: auto;
 
 	padding: 15px 0 15px 15px;
@@ -263,7 +263,7 @@ a{
 }
 #centerSection {
 	float: left;
-	width: 520px;
+	width: 390px;
 	height: 450px;
 	overflow-y:auto;
 	padding: 15px;
@@ -320,7 +320,9 @@ a{
 	width: 370px;
 }
 #rightPriceSide img {
+	float:right;
 	width:100px;
+	
 }
 .price{
 	float:left;

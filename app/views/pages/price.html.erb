@@ -28,10 +28,10 @@ function renderPrice(n, clickedlink, tot){
 	 	<a href="#" id="link<%= n %>" onclick="renderPrice(<%=n%>, '<%= "link" + n.to_s%>', '<%= total%>')" <% if n == 1 %> style="background:#CDE4F2;" <% end %>> <%= k.name %></a><br />
 		
 		<div id="<%= n %>" style="display: none;">
-			<h3 style="padding:0 0 10px 0;">Pris liste</h3>
+			<h3 style="padding:0 0 10px 0;"></h3>
 			<% k.types.each do |t| %>
 				
-				<div class="price">	<p><%= t.title %> ........ <%= t.price %></p></div><br />
+				<div class="price">	<p><%= t.title %> <%= t.price %></p></div><br />
 			<% end %>	
 			
 		</div>
@@ -42,9 +42,9 @@ function renderPrice(n, clickedlink, tot){
 		<a href="#" id="link<%= n %>" onclick="renderPrice(<%= n %>, '<%= "link"+n.to_s%>', '<%= total%>')">Hudbehandlinger</a>
 		
 		<div id="<%= n %>" style="display: none;">
-			<h3 style="padding:0 0 10px 0;">Pris liste</h3>
+			<h3 style="padding:0 0 10px 0;"></h3>
 			<% Hud.find(:all).each do |h| %>
-				<div class="price"><p><%= h.title %> ........ <%= h.price %></p></div><br />
+				<div class="price"><p><%= h.title %> <%= h.price %></p></div><br />
 			<% end %>
 		</div>
 		
@@ -54,9 +54,9 @@ function renderPrice(n, clickedlink, tot){
 <div id="widePrice">
 	<% Kirurgi.find(:all).each do |ki| %>
 	<div id="<%= n %>" >
-			<h3 style="padding:0 0 10px 0;">Pris liste</h3>
+			<h3 style="padding:0 0 10px 0;"></h3>
 			<% ki.types.each do |ti| %>
-				<div class="price"><p><%= ti.title %> ........ <%= ti.price %></p></div><br />
+				<div class="price"><p><%= ti.title %> <%= ti.price %></p></div><br />
 			<% end %>
 			<% break %>
 			<% end %>
@@ -66,6 +66,6 @@ function renderPrice(n, clickedlink, tot){
 </div>
 <div id="rightSidePrice">
 
-<img style="width:350px; float:right;" src="https://dl.dropbox.com/u/7238474/leger/doc.jpg" alt="bilde">
+<img style="width:350px; float:right;border-radius:10px;" src="https://dl.dropbox.com/u/7238474/leger/doc.jpg" alt="bilde">
 
 </div>
