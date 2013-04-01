@@ -235,9 +235,11 @@ a{
 }
 #leftSide a {
 	float: left;
-	width: 100%;
+	width: 150px;
 	text-decoration: none;
-
+	padding:5px;
+	line-height: 1.5;
+	border-radius:0 20px 20px 0;
 }
 #leftSide a:visited {
 
@@ -249,7 +251,7 @@ a{
 	float: left;
 	width: 280px;
 	height: auto;
-
+	margin:5px 0 0 0;
 	padding: 15px 0 15px 15px;
 }
 #leftSide h3{
@@ -310,14 +312,14 @@ a{
 
 #widePrice{
 	float: left;
-	width: 300px;
+	width: 400px;
 	height: auto;
 	
 	padding: 15px 0px 15px 15px;
 }
 #rightPriceSide{
 	float:left;
-	width: 370px;
+	width: 350px;
 }
 #rightPriceSide img {
 	float:right;

@@ -1,7 +1,7 @@
 <script>
 
 function renderPrice(n, clickedlink, tot){
-	var x=document.getElementById("widePrice");
+	var x=document.getElementById("centerSection");
 			 var y = document.getElementById(n);
   			 x.innerHTML= y.innerHTML;
 		 
@@ -20,7 +20,7 @@ function renderPrice(n, clickedlink, tot){
 
 </script>
 
-<div id="leftSidePrice">
+<div id="leftSide">
 		<% n = 1 %>
 		<% total = Kirurgi.count + Hud.count %>
 		
@@ -28,7 +28,7 @@ function renderPrice(n, clickedlink, tot){
 	 	<a href="#" id="link<%= n %>" onclick="renderPrice(<%=n%>, '<%= "link" + n.to_s%>', '<%= total%>')" <% if n == 1 %> style="background:#CDE4F2;" <% end %>> <%= k.name %></a><br />
 		
 		<div id="<%= n %>" style="display: none;">
-			<h3 style="padding:0 0 10px 0;"></h3>
+			
 			<% k.types.each do |t| %>
 				
 				<div class="price"><p><%= t.title %></p></div><div class="priceNum"><p> <%= t.price %></p></div>
@@ -42,7 +42,7 @@ function renderPrice(n, clickedlink, tot){
 		<a href="#" id="link<%= n %>" onclick="renderPrice(<%= n %>, '<%= "link"+n.to_s%>', '<%= total%>')">Hudbehandlinger</a>
 		
 		<div id="<%= n %>" style="display: none;">
-			<h3 style="padding:0 0 10px 0;"></h3>
+			
 			<% Hud.find(:all).each do |h| %>
 			<div class="price"><p><%= h.title %></p></div><div class="priceNum"><p> <%= h.price %></p></div>
 			<% end %>
@@ -51,10 +51,10 @@ function renderPrice(n, clickedlink, tot){
 		
 </div>
 
-<div id="widePrice">
+<div id="centerSection">
 	<% Kirurgi.find(:all).each do |ki| %>
 	<div id="<%= n %>" >
-			<h3 style="padding:0 0 10px 0;"></h3>
+			
 			<% ki.types.each do |ti| %>
 				<div class="price"><p><%= ti.title %></p></div><div class="priceNum"><p> <%= ti.price %></p></div>
 			<% end %>
@@ -64,8 +64,8 @@ function renderPrice(n, clickedlink, tot){
 	
 
 </div>
-<div id="rightSidePrice">
+<div id="rightSide">
 
-<img style="width:350px; float:right;border-radius:10px;" src="https://dl.dropbox.com/u/7238474/leger/doc.jpg" alt="bilde">
+<img style="width:220px;" src="https://dl.dropbox.com/u/7238474/leger/doc.jpg" alt="bilde">
 
 </div>
