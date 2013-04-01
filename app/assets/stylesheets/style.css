@@ -326,14 +326,13 @@ a{
 }
 .price{
 	float:left;
-	width:150px;
+	width:225px;
+}
+.priceNum{
+	float:left;
+	width:70px;
 }
 
-.price p{
-	padding:0;
-	margin:0;
-	
-}
 /* END PRICE */
 
 
