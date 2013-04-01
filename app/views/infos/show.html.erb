@@ -8,6 +8,7 @@
 	<%= simple_format @info.content %>
 </div>
 <div id="rightSide">
+	<div id="linkMargin">
 	<% type = Type.find(@info.type_id)%>
 
 	<%= link_to type.title, type%>
@@ -18,4 +19,5 @@
 	<%= link_to i.name, i%>
 	<% end %>
 	<% end %>
+	</div>
 </div>

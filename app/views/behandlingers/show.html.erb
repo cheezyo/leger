@@ -8,6 +8,8 @@
 	<%= simple_format @behandlinger.content %>
 </div>
 <div id="rightSide">
+	
+	<div id="linkMargin">
 	<% hud = Hud.find(@behandlinger.hud_id) %>
 	<%= link_to hud.title, hud %>
 	<% hud.behandlingers.each do |b|%>
@@ -17,7 +19,7 @@
 	<%= link_to b.title, b, :class => 'other' %>
 	<% end %>
 	<% end %>
-
+</div>
 	
 	
 	

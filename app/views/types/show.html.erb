@@ -21,13 +21,13 @@
 			<% end %>
 	</div>
 			<div id="rightSide">
-
+	<div id="linkMargin">
 			<%= link_to @type.title, @type, :class => 'at'%>
 			<%  @type.infos.each do |i|%>
 			
 			<%= link_to i.name, i%>
 			
 			<% end %>
-		
+		</div>
 		</div>
 

@@ -213,11 +213,13 @@ a{
 	float: left;
 	width: 215px;
 	height: auto;
-	margin:25px 0 0 0;
+	margin:0 0 0 0;
 	padding: 15px 0px 15px 15px;
 }
 
-
+#linkMargin{
+	margin-top:25px;
+}
 #rightSide a {
 	float:right;
 	width: 150px;
